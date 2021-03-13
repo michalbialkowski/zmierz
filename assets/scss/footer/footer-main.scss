@@ -1,0 +1,17 @@
+@import '../globals';
+
+#section--page--footer--main {
+	.brand__logo {
+		height: 50px;
+		
+		img {
+			max-width: 150px;
+			max-height: 50px;
+		}
+	}
+	
+	.h6 {
+		font-size: .85rem;
+		font-weight: normal;
+	}
+}

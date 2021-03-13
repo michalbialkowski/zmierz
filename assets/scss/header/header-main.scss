@@ -1,0 +1,92 @@
+@import '../globals';
+
+#section--page--header--main {
+	.brand__logo {
+		@media #{$lg-min} {
+			position: relative;
+			top: 15px;
+			z-index: 100;
+		}
+	}
+	
+	position: relative;
+	
+	&:before {
+		position: absolute;
+		content: '';
+		height: 100%;
+		top: 0;
+		right: 0;
+		background: #EFF6FD;
+		z-index: -1;
+		width: 100%;
+		
+		@media #{$md} {
+			width: calc((100vw - 720px) / 2);
+		}
+		
+		@media #{$lg} {
+			width: calc((100vw - 960px) / 2);
+		}
+		
+		@media #{$xl-min} {
+			width: calc((100vw - 1140px) / 2);
+		}
+	}
+	
+	
+	@media #{$md-min} {
+		.row {
+			height: 90px;
+		}
+	}
+	
+	@media #{$sm-max} {
+		.bg-white {
+			position: relative;
+
+			&:before {
+				position: absolute;
+				content: '';
+				height: 100%;
+				top: 0;
+				left: calc(50% - 50vw);
+				background: white;
+				z-index: -1;
+				width: 100vw;
+			}
+		}
+	}
+	
+	@media #{$md-min} {
+		.bg-white {
+			background: transparent !important;
+		}
+	}
+	
+	.bg__area {
+		position: relative;
+		overflow: hidden;
+		
+		&:before {
+			position: absolute;
+			content: '';
+			width: 2560px;
+			height: 2560px;
+			top: 0;
+			left: calc(-1280px + 45px);
+			background: #EFF6FD;
+			@media #{$md-min} {
+				clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+				-webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+			}
+			z-index: -1;
+		}
+	}
+	
+	.nav {
+		.h6 {
+			font-size: .75rem;
+		}
+	}
+}

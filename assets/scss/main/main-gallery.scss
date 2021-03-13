@@ -1,0 +1,43 @@
+@import '../globals';
+
+#section--page--main--gallery {
+	.row {
+		margin-left: -7.5px;
+		margin-right: -7.5px;
+		
+		.col-12 {
+			@media #{$lg-min} {
+				max-width: 20% !important;
+			}
+			
+			padding-left: 7.5px;
+			padding-right: 7.5px;
+			padding-top: 7.5px;
+			padding-bottom: 7.5px;
+		}
+		
+		@media #{$lg-min} {
+			> div + div + div + div + div + div {
+				display: none;
+			}
+		}
+		
+		@media #{$md} {
+			> div + div + div + div {
+				display: none;
+			}
+		}
+		
+		@media #{$sm} {
+			> div + div + div {
+				display: none;
+			}
+		}
+		
+		@media #{$xs} {
+			> div + div {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,66 @@
+@import '../globals';
+
+#section--page--main--services {
+	.card.rounded-bottom {
+		border-bottom-right-radius: 0.5rem !important;
+		border-bottom-left-radius: 0.5rem !important;
+		border-top-right-radius: 0 !important;
+		border-top-left-radius: 0 !important;
+	}
+	
+	@media #{$md} {
+		.card-img-top {
+			max-width: 50%;
+			object-fit: cover;
+		}
+		
+		.card.rounded-bottom {
+			border-bottom-right-radius: 0.5rem !important;
+			border-bottom-left-radius: 0 !important;
+			border-top-right-radius: 0.5rem !important;
+			border-top-left-radius: 0 !important;
+		}
+	}
+	
+	.btn i {
+		transition: transform .5s;
+	}
+	
+	.btn.collapsed i {
+		transform: rotate(-180deg);
+	}
+	
+	h2 {
+		@media #{$xs} {
+			font-size: 1.5rem;
+		}
+		
+		@media #{$md} {
+			font-size: 1.75rem;
+		}
+		
+		@media #{$lg} {
+			font-size: 1.5rem;
+		}
+	}
+	
+	.modal-dialog {
+		position: absolute;
+		margin: 0;
+		width: 100%;
+		max-width: none;
+		height: 100%;
+		left: 0;
+		top: 0;
+		border: 0;
+	}
+	
+	.modal-dialog .modal-header > button {
+		display: none;
+	}
+	
+	.modal-content {
+		border: 0;
+		min-height: 100vh;
+	}
+}

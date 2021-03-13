@@ -1,0 +1,22 @@
+@import '../globals';
+
+#section--page--header--nav {
+	.navbar-brand {
+		img {
+			max-width: 150px;
+			max-height: 50px;
+		}
+	}
+	
+	> .navbar {
+		transition: top .5s;
+	}
+	
+	&.d-none {
+		display: block !important;
+		
+		> .navbar {
+			top: -80px;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+@import '../globals';
+
+#section--page--main--info {
+	ul li {
+		img {
+			max-width: 120px;
+			max-height: 40px;
+		}
+	}
+}

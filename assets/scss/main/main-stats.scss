@@ -1,0 +1,29 @@
+@import '../globals';
+
+#section--page--main--stats {
+	.bg-light {
+		background: #EDF6FD !important;
+	}
+	
+	.svg * {
+		fill: $blue;
+	}
+	
+	@media #{$lg-min} {
+		.row > * + * {
+			border-left: 1px solid rgba(0, 0, 0, .10);
+		}
+	}
+	
+	@media #{$md} {
+		.row > *:first-child + * + * {
+			border-left: none;
+		}
+	}
+	
+	@media #{$sm} {
+		.row > *:first-child + * + * {
+			border-left: none;
+		}
+	}
+}

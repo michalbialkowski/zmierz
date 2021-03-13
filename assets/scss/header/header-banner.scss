@@ -1,0 +1,81 @@
+@import '../globals';
+
+#section--page--header--banner {
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	background-position: center bottom;
+	
+	@media #{$xs-max} {
+		background-position: 37.5% bottom;
+	}
+	
+	@media #{$sm} {
+		background-position: -415px bottom;
+	}
+	
+	@media #{$md} {
+		background-position: -325px bottom;
+	}
+	
+	@media #{$lg} {
+		background-position: 165px bottom;
+	}
+	
+	@media #{$xl-min} {
+		background-position: 165px bottom;
+	}
+	
+	.card {
+		background: rgba(255, 255, 255, .75);
+		border-radius: 0.5rem !important;
+	}
+	
+	.bg__area {
+		position: relative;
+		
+		@media #{$md-max} {
+			&:before {
+				position: absolute;
+				content: '';
+				width: 2560px;
+				height: 100%;
+				top: 0;
+				left: calc(50% - 1280px);
+				background: white;
+				opacity: .65;
+			}
+		}
+		
+		@media #{$lg-min} {
+			&:before {
+				position: absolute;
+				content: '';
+				width: 2560px;
+				height: 2560px;
+				top: -1px;
+				right: -1px;
+				background: white;
+				clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+				-webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+			}
+		}
+	}
+	
+	form {
+		input {
+			border-color: black;
+			color: black;
+			font-weight: 600;
+		}
+		
+		::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			color: black;
+			opacity: 1; /* Firefox */
+		}
+		
+		label {
+			color: black;
+		}
+	}
+}
